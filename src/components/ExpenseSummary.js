@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import { connect } from "react-redux";
 import numeral from "numeral";
@@ -14,6 +15,11 @@ const ExpenseSummary = ({ expenseCount, expenseTotal }) => {
       </h1>
     </div>
   );
+};
+
+ExpenseSummary.propTypes = {
+  expenseCount: PropTypes.number,
+  expenseTotal: PropTypes.number,
 };
 
 const mapStateToProps = (state) => {
